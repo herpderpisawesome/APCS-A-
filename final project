@@ -1,1 +1,50 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+	<h1> Four Function Calculator</h1>
+<div> <input type = "number" id = "num1" placeholder = "input a number"></div>
+<div> <input type = "number" id = "num2" placeholder = "input a number"></div>
+<select id = "operation">
+	<option value = "Add"> Add </option>
+	<option value = "Subtract" > Subtract </option>
+	<option value = "Multiply"> Multiply </option>
+	<option value = "Divide"> Divide </option>
+</select>
+
+<button onclick = "Calculate()"> Calculate </button>
+<p id= "showResult"> The result will display here </p>
+
+<script>
+	function Calculate(){
+		const num1 = parseFloat(document.getElementById("num1").value);
+		const num2 = parseFloat(document.getElementById("num2").value);
+
+		switch(document.getElementById("operation").value){
+			case "Add":
+			document.getElementById("showResult").innerHTML = num1 + num2
+			break;
+
+			case "Subtract":
+			document.getElementById("showResult").innerHTML = num1 - num2
+			break;
+
+			case "Multiply":
+			document.getElementById("showResult").innerHTML = num1 * num2
+			break;
+
+			case "Divide":
+			document.getElementById("showResult").innerHTML = num1 / num2
+			break;
+
+		}
+
+	}
+</script>
+
+
+</body>
+</html>
